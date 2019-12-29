@@ -1,0 +1,19 @@
+header.header
+  .header__wrapper
+    img.header__logo(src="img/LOGO.png" width="112" height="24")
+    ul.header__list
+      li.header__item
+        a.header__link(href="tel:8800555555")
+          svg.header__item-icon.header__item-icon--phone(width="12" height="13")
+            use(xlink:href="#icon-phone")
+          span +7 (800) 555-06-75
+      li.header__item
+        a.header__link(href="#")
+          svg.header__item-icon.header__item-icon--mail(width="16" height="12")
+            use(xlink:href="#icon-mail")
+          span Написать в почту
+      li.header__item
+        a.header__link(href="#")
+          svg.header__item-icon.header__item-icon--tg(width="12" height="12")
+            use(xlink:href="#icon-tg")
+          span Написать в Telegram
