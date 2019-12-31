@@ -1,20 +1,71 @@
 .intro__wrapper
   @extend container
+  display flex
+  flex-wrap wrap
+  padding 25px 110px 0 150px
+
+.intro__content
+  max-width 560px
+  padding-top 52px
 
 .intro__title
-  @extend font()
-  font-family: Gotham Pro;
-font-style: normal;
-font-weight: bold;
-font-size: 32px;
-line-height: 120%;
-/* or 38px */
-display: flex;
-align-items: center;
-letter-spacing: 0.0025em;
+  font(GothamPro_Bold, 32px, 38px)
 
-color: #29435D; 
+  letter-spacing 0.0025em
+  margin 0
+  margin-bottom 18px
+  color darkblue
 
 .intro__description
+  font(GothamPro_Regular, 18px, 22px)
+
+  padding 0
+  margin 0
+  margin-bottom 25px
+  letter-spacing 0.0025em
+  color grey
 
 .intro__btn
+  display block
+  font(MuseoSansCyrl_500, 14px, 24px)
+
+  width 160px
+  min-height 32px
+  background blue
+  border-radius 6px
+  text-decoration none
+  letter-spacing 0.045em
+  color white
+  padding 4px 5px 0 20px
+
+@media(max-width: desktop-width)
+  .intro__wrapper
+    padding 33px 18px 0 30px
+
+  .intro__content
+    width 50%
+    padding-top 27px
+    flex-grow 1
+    
+  .intro__title
+    font-size 26px
+    line-height 31px
+
+  .intro__description
+    font-size 16px
+    line-height 19px
+
+@media(max-width: tablet-width)
+  .intro__title
+    font-size 18px
+    line-height 22px
+
+  .intro__description
+    font-size 12px
+    line-height 14px
+
+  .intro__btn
+    width 111px;
+    min-height 31px
+    font-size 10px
+    padding-left 10px

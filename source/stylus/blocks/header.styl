@@ -7,7 +7,6 @@
   min-height 56px
 
 .header__list
-  outline 1px solid red
   display flex
   flex-wrap wrap
   justify-content flex-end
@@ -44,13 +43,16 @@
   color grey
 
 @media (max-width: desktop-width)
+  .header__wrapper
+    padding-right 14px
+
   .header__logo
     width 82px
     height 18px
 
   .header__item
     width auto
-    margin-right 35px
+    margin-right 38px
 
     & span
       display none

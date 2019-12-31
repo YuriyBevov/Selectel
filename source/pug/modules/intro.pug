@@ -2,8 +2,15 @@ section.intro
   .intro__wrapper
     .intro__content
       h1.intro__title Надежные серверы для проектов любой сложности
-      p.intro__description Выделенный сервер — это аренда сервера под задачи вашего проекта с возможностью свободно распоряжаться ресурсами машины и установки любого программного обеспечения.
-      a.intro__btn(href="#") Готовые серверы 
+      p.intro__description Выделенный сервер — это аренда сервера под&nbsp;задачи вашего проекта с возможностью свободно распоряжаться&nbsp;ресурсами машины и&nbsp;установки любого программного обеспечения.
+      a.intro__btn(href="#") Готовые серверы
     picture
+      source(type="image/webp" media="(max-width: 767px)" srcset="img/main-img-mobile1x.webp 1x, img/main-img-mobile2x.webp 2x")
+      source(type="image/webp" media="(max-width: 1199px)" srcset="img/main-img-tablet1x.webp 1x, img/main-img-tablet2x.webp 2x")
       source(type="image/webp" srcset="img/main-img1x.webp 1x, img/main-img2x.webp 2x")
+
+      source(media="(max-width: 767px)" srcset="img/main-img-mobile1x.jpg 1x, img/main-img-mobile2x.jpg 2x")
+      source(media="(max-width: 1199px)" srcset="img/main-img-tablet1x.jpg 1x, img/main-img-tablet2x.jpg 2x")
+
+      //- retina: 1x width: 380px, height: 363px; 2x  width: 760px, height: 726px
       img.intro__img(src="img/main-img1x.png" srcset="img/main-img2x.png 2x" alt="Сервер")
