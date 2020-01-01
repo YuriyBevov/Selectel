@@ -57,7 +57,7 @@ gulp.task('style', function () {
     .pipe(sourcemap.init())
     .pipe(stylus())
     .pipe(postcss([ autoprefixer() ]))
-    //.pipe(csso())
+    .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
@@ -102,19 +102,19 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("source/img"));
 });
 
-gulp.task("sprite", function () {
+/*gulp.task("sprite", function () {
   return gulp.src("source/img/{icon-*}.svg")
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite_auto.svg"))
     .pipe(gulp.dest("source/img"));
-});
+});*/
 
-/*gulp.task("sprite", function () {
+gulp.task("sprite", function () {
   return gulp.src("source/img/{icon-*,htmlacademy*}.svg")
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite_auto.svg"))
     .pipe(gulp.dest("source/img"));
-});*/
+});
 
 // Локальный сервер
 

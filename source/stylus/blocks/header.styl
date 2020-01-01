@@ -24,7 +24,7 @@
     padding-right 0
 
   &-icon
-    fill red
+    fill grey
 
     &--phone
       margin-right 4px
@@ -43,13 +43,6 @@
   color grey
 
 @media (max-width: desktop-width)
-  .header__wrapper
-    padding-right 14px
-
-  .header__logo
-    width 82px
-    height 18px
-
   .header__item
     width auto
     margin-right 38px
@@ -61,11 +54,12 @@
       margin-right 0
 
 @media (max-width: tablet-width)
-  .header__logo
-    width 52px
-    height 11px
+  .header__wrapper
+    min-height 32px
+    padding 0 20px
 
   .header__item
+    margin-right 16px
 
     &-icon
       &--phone

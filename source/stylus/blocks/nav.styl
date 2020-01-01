@@ -1,0 +1,55 @@
+.nav__list
+  display flex
+  flex-wrap wrap
+  list-style none
+  margin 0
+  padding 0
+
+.nav__item
+  width 140px
+  margin-right 46px
+  margin-bottom 23px
+  &:nth-child(4n)
+    margin-right 0
+
+.nav__link
+  font(MuseoSansCyrl_500, 14px, 17px)
+  text-decoration none
+  letter-spacing 0.0275em
+  color grey
+
+@media (max-width: desktop-width)
+  .nav__item
+    width 115px
+    margin-right 32px
+    margin-bottom 16px
+
+  .nav__link
+    font-size 12px
+    line-height 14px
+
+@media (max-width: tablet-width)
+  .nav__item
+    width 110px
+    margin-right 0
+    margin-bottom 9px
+
+    &:nth-child(4n)
+      margin-right 0
+
+    &--host
+      order 1
+    &--equipment
+      order 7
+    &--data
+      order 4
+    &--blog
+      order 2
+    &--cloud
+      order 5
+    &--decision
+      order 3
+    &--company
+      order 8
+    &--office
+      order 6

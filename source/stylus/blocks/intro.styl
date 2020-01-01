@@ -40,13 +40,13 @@
 
 @media(max-width: desktop-width)
   .intro__wrapper
-    padding 33px 18px 0 30px
+    padding 33px 35px 0 30px
 
   .intro__content
     width 50%
     padding-top 27px
     flex-grow 1
-    
+
   .intro__title
     font-size 26px
     line-height 31px
@@ -56,6 +56,18 @@
     line-height 19px
 
 @media(max-width: tablet-width)
+  .intro__wrapper
+    position relative
+    padding 0 20px 150px
+
+    & img
+      position absolute
+      bottom 0
+      right 28px
+
+  .intro__content
+    padding-top 31px
+
   .intro__title
     font-size 18px
     line-height 22px
@@ -66,6 +78,7 @@
 
   .intro__btn
     width 111px;
-    min-height 31px
+    min-height 15px
     font-size 10px
-    padding-left 10px
+    padding: 0;
+    padding-left: 13px;

@@ -1,0 +1,48 @@
+.footer
+  margin-top auto
+  box-shadow 0px -1px 5px rgba(0, 0, 0, 0.1)
+
+.footer__wrapper
+  @extend container
+
+  display flex
+  flex-wrap wrap
+  min-height 172px
+  padding-top 38px
+
+.footer__logo
+  margin-bottom 26px
+
+.footer__social
+  width 200px
+  padding-top 3px
+  padding-left 4px
+
+.footer__nav
+  width 50%
+  flex-grow 1
+
+@media (max-width: desktop-width)
+  .footer__wrapper
+    min-height 163px
+    padding-top 27px
+
+  .footer__social
+    width 148px
+    padding-top 5px
+    padding-left 0
+
+  .footer__logo
+    margin-bottom 21px
+
+@media (max-width: tablet-width)
+  .footer__wrapper
+    padding-right 0
+    padding-top 21px
+
+  .footer__social
+    width 52px
+    margin-right 28px
+
+  .footer__logo
+    margin-bottom 16px
