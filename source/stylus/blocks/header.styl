@@ -26,6 +26,8 @@
   &-icon
     fill grey
 
+    transition fill 0.3s 0.05s
+
     &--phone
       margin-right 4px
     &--mail
@@ -41,6 +43,22 @@
   text-decoration none
   letter-spacing 0.0025em
   color grey
+
+  transition color 0.2s 0.05s
+
+  &:hover,
+  &:focus
+    color darkblue
+
+  &:active
+    color rgba(131, 145, 178, 0.6)
+
+  &:hover svg,
+  &:focus svg
+    fill darkblue
+
+  &:active svg
+    fill rgba(131, 145, 178, 0.6)
 
 @media (max-width: desktop-width)
   .header__item

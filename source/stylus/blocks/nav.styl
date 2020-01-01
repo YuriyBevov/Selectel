@@ -18,6 +18,15 @@
   letter-spacing 0.0275em
   color grey
 
+  transition color 0.2s 0.05s
+
+  &:hover,
+  &:focus
+    color darkblue
+
+  &:active
+    color rgba(131, 145, 178, 0.6)
+
 @media (max-width: desktop-width)
   .nav__item
     width 115px
