@@ -8,6 +8,17 @@
 .social__item
   margin-right 20px
 
+.social__link
+  & svg
+    fill grey
+    transition fill duration
+    
+  &:hover svg,
+  &:focus svg
+    fill darkblue
+  &:active svg
+    fill link_active
+
 @media (max-width: desktop-width)
   .social__list
     padding-left 3px

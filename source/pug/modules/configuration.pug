@@ -1,0 +1,20 @@
+section.configuration
+  .configuration__wrapper
+    h2.configuration__title Доступные конфигурации
+
+    .configuration__select
+
+      .configuration__range-box.range
+        include range
+
+      .configuration__type-box
+        input(type="radio" name="configuration__type" id="GPU")
+        label(for="GPU").configuration__type-label GPU
+
+        input(type="radio" name="configuration__type" id="RAID")
+        label(for="RAID").configuration__type-label.configuration__type-label--RAID RAID
+
+        input(type="radio" name="configuration__type" id="SSD")
+        label(for="SSD").configuration__type-label SSD
+
+    p.configuration__description Performance Line

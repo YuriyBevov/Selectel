@@ -38,6 +38,14 @@
   color white
   padding 4px 5px 0 20px
 
+  transition background-color duration
+
+  &:hover,
+  &:focus
+    background-color btn_hover
+  &:active
+    background-color btn_active
+
 @media(max-width: desktop-width)
   .intro__wrapper
     padding 33px 35px 0 30px
