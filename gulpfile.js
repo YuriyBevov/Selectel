@@ -69,17 +69,17 @@ gulp.task('style', function () {
 // 1: свой JS
 
 gulp.task("js", function(){
-  return gulp.src("source/js/script.js")
+  return gulp.src("source/js/scripts/*.js")
   .pipe(plumber())
-  .pipe(uglify())
-  .pipe(rename("script.min.js"))
+  //.pipe(uglify())
+  .pipe(rename("main.min.js"))
   .pipe(gulp.dest("build/js"));
 });
 
 // 2: Используемые библиотеки
 
 gulp.task("vendor", function(){
-  return gulp.src("source/js/vendors/*.js")
+  return gulp.src("source/js/vendor/*.js")
   .pipe(plumber())
   .pipe(uglify())
   .pipe(rename("vendor.min.js"))

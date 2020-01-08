@@ -3,7 +3,7 @@
 
   display flex
   flex-direction column
-  outline 1px solid red
+  padding-top 1px
 
 .configuration__title
   font(GothamPro_Bold, 32px, 38px)
@@ -23,7 +23,7 @@
   display flex
   width 486px
 
-  & input[type="radio"]
+  & input[type="checkbox"]
     display none
 
 .configuration__type-label
@@ -55,18 +55,31 @@
     border-radius 50%;
     transform translateY(-50%)
 
-.configuration__type-box input[type="radio"]:checked + .configuration__type-label::before
+.configuration__type-box input[type="checkbox"]:checked + .configuration__type-label::before
   border-color checked
   background-image url("../img/mark.svg")
   background-repeat no-repeat
   background-position center
   background-size 10.31px 7.34px
 
-.configuration__type-box input[type="radio"]:disabled + .configuration__type-label::before
+.configuration__type-box input[type="checkbox"]:disabled + .configuration__type-label::before
   border-color secondary_grey
 
 .configuration__description
   font(GothamPro_Regular, 18px, 22px)
 
   letter-spacing 0.0025em
+  margin-bottom 30px
   color darkblue
+
+@media (max-width desktop-width)
+  .configuration__title
+    font-size 26px
+    line-height 31px
+
+  .configuration__type-box
+    width 335px
+
+  .configuration__type-label
+    width 75px
+    margin-right 40px

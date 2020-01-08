@@ -1,0 +1,101 @@
+.product
+  position relative
+
+.product__preloader
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  display flex
+  align-items center
+  justify-content center
+  background-color white
+  z-index 1000
+
+.product__list
+  list-style none
+  margin 0
+  padding 0
+  margin-bottom 79px
+
+.product__item
+  width 100%
+  min-height 138px
+  padding 25px 13px 23px
+  margin-bottom 12px
+  background-color white
+  border 1px solid grey
+  border-radius 7px
+
+.product__name
+  font(GothamPro_Bold, 14px, 17px)
+
+  letter-spacing 0.0025em
+  margin-bottom 17px
+  color darkblue
+
+.product__wrapper
+  display flex
+  flex-direction column
+
+.product__content
+  display flex
+  flex-wrap wrap
+
+  & p
+    width 128px
+    font(GothamPro_Regular, 14px, 17px)
+    margin 0
+    margin-right 58px
+    letter-spacing 0.0025em
+    text-align center
+    color darkblue
+
+  & .product__cpu
+    text-align left
+    padding-right 25px
+
+.product__price-box
+  display flex
+  flex-direction column
+  align-items center
+  margin-left auto
+
+  & p
+    font(GothamPro_Bold, 14px, 17px)
+    margin-right 0
+    margin-bottom 13px
+
+  & a
+    font(GothamPro_Regular, 10px, 22px)
+
+    width 76px
+    min-height 24px
+    text-decoration none
+    letter-spacing 0.0275em
+    text-transform capitalize
+    text-align center
+    border 1px solid blue
+    border-radius 6px
+    color blue
+
+@media (max-width desktop-width)
+  .product__content
+    & p
+      width 100px
+      margin-right 40px
+
+    & .product__cpu
+      width 115px
+      padding-right 0
+      font-size 16px
+      line-height 19px
+  .product__price-box
+    width 75px
+
+    & p
+      margin-right 0
+
+    & a
+      width 68px

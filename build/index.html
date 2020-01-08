@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Author: Yuriy Bevov, Category: описание сайта">
-    <title>название сайта</title>
+    <meta name="Description" content="Author: Yuriy Bevov, Category: Тестовое задание Selectel">
+    <title>Тестовое задание Selectel</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/style.min.css">
-    <script>document.createElement( "picture" )</script>
+    <script>document.createElement("picture")</script>
+    <script src="js/vendor.min.js" async=""></script>
   </head>
   <body>
     <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-fb" viewBox="0 0 22 23">
@@ -17,6 +19,13 @@
 <path d="M16.0545 11.5331C16.0545 14.214 13.7985 16.387 11.0156 16.387C8.23266 16.387 5.97662 14.214 5.97662 11.5331C5.97662 11.0527 6.04954 10.5886 6.18458 10.1503H4.69556V16.9587C4.69556 17.3114 4.98544 17.5993 5.33991 17.5993H16.6289C16.9836 17.5993 17.2737 17.3114 17.2737 16.9587V10.1503H15.8466C15.9814 10.5886 16.0545 11.0527 16.0545 11.5331Z"></path>
 <path d="M14.7039 8.31295H16.5361C16.9376 8.31295 17.2658 7.9867 17.2658 7.58751V5.85066C17.2658 5.45125 16.9376 5.125 16.5361 5.125H14.7039C14.3021 5.125 13.974 5.45125 13.974 5.85066V7.58751C13.9738 7.98648 14.3021 8.31295 14.7039 8.31295Z"></path>
 <path d="M11 0.456665C4.92485 0.456665 0 5.35305 0 11.3931C0 17.4331 4.92485 22.3295 11 22.3295C17.0752 22.3295 22 17.4331 22 11.3931C22 5.35305 17.0752 0.456665 11 0.456665ZM17.025 19.4521H4.97526C3.83036 19.4521 2.89432 18.6097 2.89432 17.3837V5.40295C2.89432 4.1765 3.83036 3.33426 4.97526 3.33426H17.025C18.1696 3.33426 19.1059 4.1765 19.1059 5.40295V17.3837C19.1059 18.6097 18.1694 19.4521 17.025 19.4521Z"></path>
+</symbol><symbol id="icon-loader">
+  <g transform="translate(4 4)" stroke-width="8" fill="none" fill-rule="evenodd">
+    <circle stroke-opacity=".3" cx="30" cy="30" r="30"></circle>
+    <path d="M60 30c0-9.94-8.06-30-30-30" fill="#689BFF">
+      <animateTransform attributeName="transform" type="rotate" from="0 30 30" to="360 30 30" dur="1s" repeatCount="indefinite"></animateTransform>
+    </path>
+  </g>
 </symbol><symbol id="icon-mail" viewBox="0 0 16 12">
 <path d="M14.4 0H1.6C0.72 0 0.00799999 0.675 0.00799999 1.5L0 10.5C0 11.325 0.72 12 1.6 12H14.4C15.28 12 16 11.325 16 10.5V1.5C16 0.675 15.28 0 14.4 0ZM14.4 3L8 6.75L1.6 3V1.5L8 5.25L14.4 1.5V3Z"></path>
 </symbol><symbol id="icon-phone" viewBox="0 0 12 13">
@@ -30,17 +39,17 @@
 </symbol></svg>
     </div>
     <header class="header">
-      <div class="header__wrapper"><img class="header__logo logo" src="img/LOGO.png" width="112" height="24">
+      <div class="header__wrapper"><a href="https://selectel.ru/" target="_blank"><img class="header__logo logo" src="img/LOGO.png" width="112" height="24" alt="Логотип"></a>
         <ul class="header__list">
           <li class="header__item"><a class="header__link" href="tel:8800555555">
               <svg class="header__item-icon header__item-icon--phone" width="12" height="13">
                 <use xlink:href="#icon-phone"></use>
               </svg><span>+7 (800) 555-06-75</span></a></li>
-          <li class="header__item"><a class="header__link" href="#">
+          <li class="header__item"><a class="header__link" href="mailto:sales@selectel.ru">
               <svg class="header__item-icon header__item-icon--mail" width="16" height="12">
                 <use xlink:href="#icon-mail"></use>
               </svg><span>Написать в почту</span></a></li>
-          <li class="header__item"><a class="header__link" href="#">
+          <li class="header__item"><a class="header__link" href="https://t.me/Selecte" target="_blank">
               <svg class="header__item-icon header__item-icon--tg" width="12" height="12">
                 <use xlink:href="#icon-tg"></use>
               </svg><span>Написать в Telegram</span></a></li>
@@ -57,8 +66,8 @@
           <source type="image/webp" media="(max-width: 767px)" srcset="img/main-img-mobile1x.webp 1x, img/main-img-mobile2x.webp 2x">
           <source type="image/webp" media="(max-width: 1199px)" srcset="img/main-img-tablet1x.webp 1x, img/main-img-tablet2x.webp 2x">
           <source type="image/webp" srcset="img/main-img1x.webp 1x, img/main-img2x.webp 2x">
-          <source media="(max-width: 767px)" srcset="img/main-img-mobile1x.jpg 1x, img/main-img-mobile2x.jpg 2x">
-          <source media="(max-width: 1199px)" srcset="img/main-img-tablet1x.jpg 1x, img/main-img-tablet2x.jpg 2x"><img class="intro__img" src="img/main-img1x.png" srcset="img/main-img2x.png 2x" alt="Сервер">
+          <source media="(max-width: 767px)" srcset="img/main-img-mobile1x.png 1x, img/main-img-mobile2x.png 2x">
+          <source media="(max-width: 1199px)" srcset="img/main-img-tablet1x.png 1x, img/main-img-tablet2x.png 2x"><img class="intro__img" src="img/main-img1x.png" srcset="img/main-img2x.png 2x" alt="Сервер">
         </picture>
       </div>
     </section>
@@ -67,41 +76,49 @@
         <h2 class="configuration__title">Доступные конфигурации</h2>
         <div class="configuration__select">
           <div class="configuration__range-box range"><b class="range__name">vCPU</b>
-            <input class="range__value" type="number" name="effect-level" min="2" max="10" step="2" value="6">
+            <input class="range__value" type="number" name="effect-level" min="2" max="12" step="2" value="6">
             <div class="range__box">
               <div class="range__pin"></div>
-              <div class="range__depth"></div><span class="range__cors range__cors--min">2</span><span class="range__cors range__cors--max">12</span><span class="range__cors range__cors--current">6&nbsp;<span class="range__current-value">ядер</span></span>
+              <div class="range__line"></div><span class="range__cors range__cors--min">2</span><span class="range__cors range__cors--max">12</span><span class="range__cors range__cors--current">6&nbsp;<span class="range__current-value">ядер</span></span>
             </div>
           </div>
           <div class="configuration__type-box">
-            <input type="radio" name="configuration__type" id="GPU">
+            <input type="checkbox" name="configuration__type" id="GPU">
             <label class="configuration__type-label" for="GPU">GPU</label>
-            <input type="radio" name="configuration__type" id="RAID">
+            <input type="checkbox" name="configuration__type" id="RAID">
             <label class="configuration__type-label configuration__type-label--RAID" for="RAID">RAID</label>
-            <input type="radio" name="configuration__type" id="SSD">
+            <input type="checkbox" name="configuration__type" id="SSD">
             <label class="configuration__type-label" for="SSD">SSD</label>
           </div>
         </div>
         <p class="configuration__description">Performance Line</p>
+        <div class="configuration__product product">
+          <div class="product__preloader">
+            <svg class="product__preloader-icon" width="68" height="68">
+              <use xlink:href="#icon-loader"></use>
+            </svg>
+          </div>
+          <ul class="product__list"></ul>
+        </div>
       </div>
     </section>
     <footer class="footer">
       <div class="footer__wrapper">
-        <div class="footer__social social"><img class="footer__logo logo" src="img/LOGO.png" width="112" height="24">
+        <div class="footer__social social"><a href="https://selectel.ru/" target="_blank"><img class="footer__logo logo" src="img/LOGO.png" width="112" height="24" alt="Логотип"></a>
           <ul class="social__list">
-            <li class="social__item social__item--vk"><a class="social__link" href="#">
+            <li class="social__item social__item--vk"><a class="social__link" href="https://vk.com/selectel" target="_blank" aria-label="ВКонтакте">
                 <svg class="social__icon social__icon--vk" width="22" height="22">
                   <use xlink:href="#icon-vk"></use>
                 </svg></a></li>
-            <li class="social__item social__item--twit"><a class="social__link" href="#">
+            <li class="social__item social__item--twit"><a class="social__link" href="https://twitter.com/selectel" target="_blank" aria-label="Twitter">
                 <svg class="social__icon social__icon--twit" width="22" height="22">
                   <use xlink:href="#icon-twit"></use>
                 </svg></a></li>
-            <li class="social__item social__item--fb"><a class="social__link" href="#">
+            <li class="social__item social__item--fb"><a class="social__link" href="https://www.facebook.com/selectel/" target="_blank" aria-label="Facebook">
                 <svg class="social__icon social__icon--fb" width="22" height="22">
                   <use xlink:href="#icon-fb"></use>
                 </svg></a></li>
-            <li class="social__item social__item--insta"><a class="social__link" href="#">
+            <li class="social__item social__item--insta"><a class="social__link" href="https://www.instagram.com/selectel.ru/" target="_blank" aria-label="Instagram">
                 <svg class="social__icon social__icon--insta" width="22" height="22">
                   <use xlink:href="#icon-insta"></use>
                 </svg></a></li>
@@ -109,18 +126,33 @@
         </div>
         <div class="footer__nav nav">
           <ul class="nav__list">
-            <li class="nav__item nav__item--host"><a class="nav__link" href="#">Серверы</a></li>
-            <li class="nav__item nav__item--equipment"><a class="nav__link" href="#">Оборудование</a></li>
-            <li class="nav__item nav__item--data"><a class="nav__link" href="#">Дата-центры</a></li>
-            <li class="nav__item nav__item--blog"><a class="nav__link" href="#">Блог</a></li>
-            <li class="nav__item nav__item--cloud"><a class="nav__link" href="#">Облако</a></li>
-            <li class="nav__item nav__item--decision"><a class="nav__link" href="#">Решения</a></li>
-            <li class="nav__item nav__item--company"><a class="nav__link" href="#">О компании</a></li>
-            <li class="nav__item nav__item--office"><a class="nav__link" href="#">Офисы</a></li>
+            <li class="nav__item nav__item--host"><a class="nav__link" href="https://selectel.ru/" target="_blank">Серверы</a></li>
+            <li class="nav__item nav__item--equipment"><a class="nav__link" href="https://selectel.ru/" target="_blank">Оборудование</a></li>
+            <li class="nav__item nav__item--data"><a class="nav__link" href="https://selectel.ru/" target="_blank">Дата-центры</a></li>
+            <li class="nav__item nav__item--blog"><a class="nav__link" href="https://selectel.ru/" target="_blank">Блог</a></li>
+            <li class="nav__item nav__item--cloud"><a class="nav__link" href="https://selectel.ru/" target="_blank">Облако</a></li>
+            <li class="nav__item nav__item--decision"><a class="nav__link" href="https://selectel.ru/" target="_blank">Решения</a></li>
+            <li class="nav__item nav__item--company"><a class="nav__link" href="https://selectel.ru/" target="_blank">О компании</a></li>
+            <li class="nav__item nav__item--office"><a class="nav__link" href="https://selectel.ru/" target="_blank">Офисы</a></li>
           </ul>
         </div>
       </div>
     </footer>
-    <!--template-->
+    <template id="product-card-template">
+      <li class="product__item">
+        <div class="product__wrapper"><b class="product__name"></b>
+          <div class="product__content">
+            <p class="product__cpu"><span class="product__cpu-count"></span><span class="product__cpu-name"></span><span class="product__cpu-cores"></span></p>
+            <p class="product__ram"></p>
+            <p class="product__hdd"><span class="product__hdd-count"></span><span class="product__hdd-value"></span>&nbsp;<span class="product__hdd-type"></span></p>
+            <p class="product__gpu"></p>
+            <div class="product__price-box">
+              <p><span class="product__price"></span> ₽/месяц</p><a class="product__btn" href="#">Заказать</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </template>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

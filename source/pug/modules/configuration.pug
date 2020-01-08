@@ -8,13 +8,19 @@ section.configuration
         include range
 
       .configuration__type-box
-        input(type="radio" name="configuration__type" id="GPU")
+        input(type="checkbox" name="configuration__type" id="GPU")
         label(for="GPU").configuration__type-label GPU
 
-        input(type="radio" name="configuration__type" id="RAID")
+        input(type="checkbox" name="configuration__type" id="RAID")
         label(for="RAID").configuration__type-label.configuration__type-label--RAID RAID
 
-        input(type="radio" name="configuration__type" id="SSD")
+        input(type="checkbox" name="configuration__type" id="SSD")
         label(for="SSD").configuration__type-label SSD
 
     p.configuration__description Performance Line
+
+    .configuration__product.product
+      .product__preloader
+        svg.product__preloader-icon(width="68" height="68")
+          use(xlink:href="#icon-loader")
+      ul.product__list
