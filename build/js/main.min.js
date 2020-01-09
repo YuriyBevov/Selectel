@@ -226,32 +226,6 @@
     var gpuBtn = document.querySelector("#GPU");
     var raidBtn = document.querySelector("#RAID");
     var ssdBtn = document.querySelector("#SSD");
-    var gpuList = [];
-    var ssdList = [];
-    var raidList = [];
-    var dataArrays = {
-      gpu: gpuList,
-      ssd: ssdList,
-      raid: raidList
-    }
-
-    for (var i = 0; i < productCards.length; i++) {
-
-      var gpuItem = productCards[i].querySelector('.product__gpu'); // нахожу все поля с данными о видеокарте
-      if (gpuItem.innerHTML) { // проверяю, если данные о видеокарте существуют - добавляю в массив gpuList
-        gpuList.push(productCards[i])
-      }
-
-      var ssdItem = productCards[i].querySelector('.product__hdd-type'); // нахожу все поля с данными о типе диска
-      if(ssdItem.innerHTML === 'SSD') { // проверяю, если тип диска SSD - добавляю в массив ssdList
-        ssdList.push(productCards[i])
-      }
-
-      var raidItem = productCards[i].querySelector('.product__hdd-count'); // нахожу все поля с данными о количестве дисков
-      if(raidItem.innerHTML !== "1 x ") { // проверяю, если дисков больше одного - добавляю в массив raidList
-        raidList.push(productCards[i])
-      }
-    }
 
     var range = document.querySelector('.range__value');
     range.value = rangeValue;
@@ -267,15 +241,75 @@
     var onChangeHandler = function () {
       hideElem();
 
-      var currentData = productCards;
+      var currentData = [];
       messageNode.classList.remove('visually-hidden');
 
       if (gpuBtn.checked) {
-        currentData = dataArrays.gpu;
-      } else if (ssdBtn.checked) {
-        currentData = dataArrays.ssd;
-      } else if (raidBtn.checked) {
-        currentData = dataArrays.raid;
+        currentData = [];
+         productCards.forEach(function(item, i, productCards) {
+          if (productCards[i].querySelector('.product__gpu').innerHTML) {
+            currentData.push(productCards[i])
+          }
+        });
+      }
+
+      if (ssdBtn.checked) {
+        currentData = [];
+         productCards.forEach(function(item, i, productCards) {
+          if (productCards[i].querySelector('.product__hdd-type').innerHTML === 'SSD') {
+            currentData.push(productCards[i])
+          }
+        });
+      }
+
+      if (raidBtn.checked) {
+        currentData = [];
+         productCards.forEach(function(item, i, productCards) {
+          if (productCards[i].querySelector('.product__hdd-count').innerHTML !== "1 x ") {
+            currentData.push(productCards[i])
+          }
+        });
+      }
+
+      if (gpuBtn.checked && ssdBtn.checked) {
+        currentData = [];
+         productCards.forEach(function(item, i, productCards) {
+           console.log('ok')
+          if (productCards[i].querySelector('.product__gpu').innerHTML && productCards[i].querySelector('.product__hdd-type').innerHTML === 'SSD') {
+            currentData.push(productCards[i])
+          }
+        });
+      }
+
+      if (gpuBtn.checked && raidBtn.checked) {
+        currentData = [];
+         productCards.forEach(function(item, i, productCards) {
+          if (productCards[i].querySelector('.product__gpu').innerHTML && productCards[i].querySelector('.product__hdd-count').innerHTML !== "1 x ") {
+            currentData.push(productCards[i])
+          }
+        });
+      }
+
+      if (ssdBtn.checked && raidBtn.checked) {
+        currentData = [];
+         productCards.forEach(function(item, i, productCards) {
+          if (productCards[i].querySelector('.product__hdd-type').innerHTML === 'SSD' && productCards[i].querySelector('.product__hdd-count').innerHTML !== "1 x ") {
+            currentData.push(productCards[i])
+          }
+        });
+      }
+
+      if (gpuBtn.checked && ssdBtn.checked && raidBtn.checked) {
+        currentData = [];
+         productCards.forEach(function(item, i, productCards) {
+          if (productCards[i].querySelector('.product__gpu').innerHTML && productCards[i].querySelector('.product__hdd-type').innerHTML === 'SSD' && productCards[i].querySelector('.product__hdd-count').innerHTML !== "1 x ") {
+            currentData.push(productCards[i])
+          }
+        });
+      }
+
+      if (!gpuBtn.checked && !ssdBtn.checked && !raidBtn.checked) {
+         currentData = productCards;
       }
 
       for (var i = 0; i < currentData.length; i++) {
