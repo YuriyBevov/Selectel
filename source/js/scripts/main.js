@@ -184,7 +184,7 @@
 
 (function () {
   var loaderIcon = document.querySelector('.product__preloader');
-  
+
   var createCard = window.card.createCard;
   var CODE = {
     SUCCESS: 200
